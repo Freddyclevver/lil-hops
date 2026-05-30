@@ -164,14 +164,14 @@ export default function AboutPage() {
       {/* Galerie Section */}
       <section className="max-w-2xl mx-auto px-6 py-20">
         <div className="grid grid-cols-2 gap-4">
-          <div className="relative group overflow-hidden rounded-xl border border-white/10 hover:border-pink-400/50 transition-all">
+          <div className="relative group overflow-hidden rounded-xl">
             <img
               src="/assets/character/magnific_2889466973 1.png"
               alt="Lil' Hops Moment"
               className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <div className="relative group overflow-hidden rounded-xl border border-white/10 hover:border-pink-400/50 transition-all">
+          <div className="relative group overflow-hidden rounded-xl">
             <img
               src="/assets/character/Bildschirmfoto 2026-05-12 um 13.16.42.png"
               alt="Lil' Hops Moment"

@@ -15,7 +15,7 @@ export default function SingleCard({
 }: SingleCardProps) {
   return (
     <div className="group">
-      <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4 border-2 border-cyan-400 border-opacity-30">
+      <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
         <img
           src={cover}
           alt={title}
