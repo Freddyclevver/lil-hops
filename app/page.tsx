@@ -157,7 +157,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-white mb-8">
           Folge Lil' Hops
         </h2>
-        <p className="text-mint-400 text-6xl md:text-7xl font-black">
+        <p className="text-mint-400 text-4xl md:text-5xl lg:text-7xl font-black break-words">
           {artist.hashtag}
         </p>
       </section>
