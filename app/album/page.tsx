@@ -8,7 +8,7 @@ export default function AlbumPage() {
     <div className="bg-black">
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="relative aspect-square rounded-xl overflow-hidden border-4 border-mint-400">
+          <div className="relative aspect-square rounded-xl overflow-hidden">
             <img src={album.cover} alt={album.title} className="w-full h-full object-cover" />
             <div className="absolute top-4 right-4">
               <StickerBadge text="Coming Soon" variant="coming-soon" />
