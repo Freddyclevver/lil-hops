@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { album } from "@/lib/content";
 import StickerBadge from "@/components/StickerBadge";
+import CountdownRelease from "@/components/CountdownRelease";
 
 export default function AlbumPage() {
   return (
@@ -32,6 +33,7 @@ export default function AlbumPage() {
                 Tracklist
               </Link>
             </div>
+            <CountdownRelease />
           </div>
         </div>
       </section>
