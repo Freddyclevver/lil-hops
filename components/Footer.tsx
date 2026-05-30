@@ -73,6 +73,9 @@ export default function Footer() {
             <Link href="#terms" className="!text-black hover:opacity-70 transition-opacity">
               Nutzungsbedingungen
             </Link>
+            <Link href="/media" className="!text-black hover:opacity-70 transition-opacity">
+              Presse & Media
+            </Link>
             <Link href="#sitemap" className="!text-black hover:opacity-70 transition-opacity">
               Seitenübersicht
             </Link>

@@ -16,6 +16,12 @@ export const artist = {
     { label: "Be Kind", text: "Freundlichkeit ist kein Zeichen von Schwäche. Für andere da sein, Grenzen respektieren, füreinander einstehen — das ist echte Stärke." },
     { label: "Be You", text: "Dein Unterschied ist deine Superkraft. Kein Trend, keine Meinung und kein Kommentar ist es wert, dass du aufhörst, du selbst zu sein." },
   ],
+  shortBio: "Lil' Hops ist die neue Stimme der deutschsprachigen Kindermusik – frech, mutig und direkt aus der Stadt. Mit eingängigen Pop-Hooks und einer unverwechselbaren Message begeistert sie Kinder zwischen 6 und 12 Jahren.",
+  genre: "Kinderpop / Deutschsprachige Kindermusik",
+  pressContact: "presse@lil-hops.de",
+  pressQuote: "Lil' Hops macht Kindermusik, die auch Eltern gerne hören – ehrlich, modern und mit einer Botschaft.",
+  keywords: ["Kinderpop", "Kindermusik Deutschland", "Pop für Kinder", "Lil Hops", "Be Bold Be You", "deutschsprachige Kindermusik", "Kinder Pop Künstlerin"],
+  similarArtists: ["Dikka", "Dizzy Disco", "Lea", "Vanessa May"],
 };
 
 export const album = {

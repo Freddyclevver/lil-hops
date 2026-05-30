@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { artist } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Über Lil' Hops – Be Bold. Be Kind. Be You.",
-  description: "Lil' Hops ist ein Hase aus der Stadt mit einem riesigen Herz. Pop-Musik für Kinder von 6–12 Jahren, die mutig zu sich selbst stehen.",
+  title: "Über Lil' Hops – Kinderpop aus Deutschland | Be Bold. Be Kind. Be You.",
+  description: "Lil' Hops ist die aufstrebende Kinderpop-Künstlerin aus Deutschland. Deutschsprachige Pop-Musik für Kinder von 6–12 Jahren – mutig, modern, mit Herz. Ähnlich wie Dikka, Dizzy Disco oder Lea.",
+  keywords: ["Kinderpop", "Kindermusik", "Pop für Kinder", "Lil Hops", "deutschsprachige Kindermusik"],
   openGraph: {
     title: "Über Lil' Hops",
     description: "Deine Freundin mit den langen Ohren und noch längeren Herzen.",
@@ -143,6 +144,20 @@ export default function AboutPage() {
         </div>
         <p className="text-lg text-gray-300 leading-relaxed">
           {artist.lovesText}
+        </p>
+      </section>
+
+      {/* Für Fans von Section - SEO */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="flex items-start gap-4 mb-8">
+          <span className="text-mint-400 text-2xl mt-1">●</span>
+          <h2 className="text-3xl font-bold text-white">Für Fans von...</h2>
+        </div>
+        <p className="text-lg text-gray-300 leading-relaxed mb-6">
+          Lil' Hops steht in einer Reihe mit den beliebtesten Kinderpop-Künstlerinnen im deutschsprachigen Raum. Ihre Musik ist für Fans von <span className="text-mint-400 font-bold">Dikka, Dizzy Disco, Lea und Vanessa May</span> gemacht — eingängige Pop-Melodien mit einer positiven Botschaft für Kids zwischen 6 und 12 Jahren.
+        </p>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Mit dem Album <span className="text-pink-300 font-bold">"Be Bold. Be You."</span> schließt sich Lil' Hops den deutschsprachigen Künstlern an, die es verstehen, Kindern Mut zuzusprechen und sie in ihrer Authentizität zu unterstützen.
         </p>
       </section>
 
