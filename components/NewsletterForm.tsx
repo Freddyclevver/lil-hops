@@ -18,10 +18,10 @@ export default function NewsletterForm() {
 
     if ("error" in result) {
       setStatus("error");
-      setMessage(result.error);
+      setMessage(result.error || "Ein Fehler ist aufgetreten.");
     } else {
       setStatus("success");
-      setMessage(result.message);
+      setMessage(result.message || "Danke! Du bist jetzt dabei.");
       setEmail("");
       setTimeout(() => setStatus("idle"), 3000);
     }
