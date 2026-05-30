@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0a0a12;
+  --color-mint: #58d5b5;
+  --color-lila: #a45bb2;
+  --color-pink: #fc59c8;
+  --color-dark-blue: #2e2075;
+  --color-neon-pink: #fc59c8;
+  --color-neon-green: #58d5b5;
+  --color-soft-white: #f8f7ff;
+  --color-denim: #2e2075;
+  --color-tan: #c8a882;
+  --color-dark-gray: #1c1c2e;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-soft-white);
+  --color-primary: var(--color-lila);
+  --color-accent: var(--color-mint);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fredoka);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-soft-white);
+  font-family: var(--font-geist-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-mint);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-neon-pink);
+  }
+}
+
+button {
+  font-family: var(--font-geist-sans);
+}
+
+/* Animations for hero character */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out both;
+}
+
+/* Enhanced dark theme with pink-black gradient */
+body {
+  background: linear-gradient(135deg, #0a0a12 0%, #2e1a2e 40%, #1a0a0f 100%);
+  min-height: 100vh;
+}
+
+/* Separator lines */
+.separator-line {
+  border-top: 1px solid rgba(0, 201, 167, 0.3);
+}
+
+.separator-thick {
+  border-top: 2px solid rgba(0, 201, 167, 0.5);
+}
