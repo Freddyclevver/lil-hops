@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import { singles, moresingles } from "@/lib/content";
 import SingleCard from "@/components/SingleCard";
+
+export const metadata: Metadata = {
+  title: "Singles – Lil' Hops",
+  description: "Alle 14 Singles von Lil' Hops: Trau dich, Hüpf hüpf hüpf!, Schrupp Schrupp, Wahrheit oder Pflicht und mehr.",
+  openGraph: {
+    title: "Singles von Lil' Hops",
+    description: "Pop-Musik für Kinder – jetzt auf Spotify und YouTube.",
+    images: ["/assets/album/BE BOLD BE YOU.png"],
+  },
+};
 
 export default function MusicPage() {
   const allSingles = [...singles, ...moresingles];

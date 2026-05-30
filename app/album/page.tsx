@@ -1,11 +1,41 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { album } from "@/lib/content";
 import StickerBadge from "@/components/StickerBadge";
 import CountdownRelease from "@/components/CountdownRelease";
 
+export const metadata: Metadata = {
+  title: "Album: Be Bold. Be You. – Lil' Hops",
+  description: "20 Songs für Kinder von 6–12 Jahren. Release am 05.06.2026. Jetzt Pre-Save auf Spotify und YouTube.",
+  openGraph: {
+    title: "Be Bold. Be You. – Album von Lil' Hops",
+    description: "Embrace Yourself – Pop-Musik für mutige Kids. Coming 05.06.2026",
+    images: ["/assets/album/BE BOLD BE YOU.png"],
+  },
+};
+
 export default function AlbumPage() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": "Be Bold. Be You.",
+    "artist": {
+      "@type": "MusicGroup",
+      "name": "Lil' Hops"
+    },
+    "datePublished": "2026-06-05",
+    "description": "Ein Album voller Ermutigung für Kinder von 6–12 Jahren. 20 Songs für mutige Kids.",
+    "image": "/assets/album/BE BOLD BE YOU.png",
+    "url": "https://lil-hops.vercel.app/album",
+    "numberOfTracks": 20
+  };
+
   return (
     <div className="bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="relative aspect-square rounded-xl overflow-hidden">

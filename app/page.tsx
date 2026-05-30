@@ -1,13 +1,43 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { album, artist } from "@/lib/content";
 import SinglesSection from "@/components/SinglesSection";
 import NewsletterForm from "@/components/NewsletterForm";
 import StickerBadge from "@/components/StickerBadge";
 import CountdownRelease from "@/components/CountdownRelease";
 
+export const metadata: Metadata = {
+  title: "Lil' Hops – Be Bold. Be You.",
+  description: "Pop-Musik für Kinder, die mutig zu sich selbst stehen. Album 'Be Bold. Be You.' coming 05.06.2026.",
+  openGraph: {
+    title: "Lil' Hops",
+    description: "Deine Freundin mit den langen Ohren und noch längeren Herzen.",
+    images: ["/assets/album/BE BOLD BE YOU.png"],
+  },
+};
+
 export default function Home() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Lil' Hops",
+    "description": "Pop-Künstlerin für Kinder von 6-12 Jahren",
+    "genre": ["Children's Music", "Pop"],
+    "url": "https://lil-hops.vercel.app",
+    "image": "/assets/album/BE BOLD BE YOU.png",
+    "sameAs": [
+      "https://open.spotify.com/intl-de/artist/0TDeX4KizHICXPDnxL8NYX",
+      "https://www.tiktok.com/@lil.hops.official",
+      "https://www.youtube.com/channel/UC-t10OVgZqqklozEhiCrWPg"
+    ]
+  };
+
   return (
     <div className="bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-0 bg-gradient-to-tr from-pink-500/40 via-black/50 to-black">
         <div className="max-w-7xl w-full grid md:grid-cols-2 gap-2 items-center z-10">

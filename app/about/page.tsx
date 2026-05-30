@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import { artist } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Über Lil' Hops – Be Bold. Be Kind. Be You.",
+  description: "Lil' Hops ist ein Hase aus der Stadt mit einem riesigen Herz. Pop-Musik für Kinder von 6–12 Jahren, die mutig zu sich selbst stehen.",
+  openGraph: {
+    title: "Über Lil' Hops",
+    description: "Deine Freundin mit den langen Ohren und noch längeren Herzen.",
+    images: ["/assets/album/BE BOLD BE YOU.png"],
+  },
+};
 
 export default function AboutPage() {
   return (

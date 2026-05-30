@@ -1,8 +1,16 @@
 "use client";
 
+import type { Metadata } from "next";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getSubscribers } from "@/app/actions/newsletter";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 interface Subscriber {
   email: string;
