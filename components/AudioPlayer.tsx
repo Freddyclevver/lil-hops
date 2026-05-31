@@ -1,10 +1,16 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.play().then(() => setPlaying(true)).catch(() => {});
+  }, []);
 
   const toggle = () => {
     if (!audioRef.current) return;
@@ -25,8 +31,8 @@ export default function AudioPlayer() {
         aria-label={playing ? "Pause" : "Play"}
       >
         <span className="text-sm">{playing ? "⏸" : "▶"}</span>
-        <span className="hidden sm:inline text-xs font-medium">
-          {playing ? "Pause" : "Play"}
+        <span className="hidden sm:inline text-xs font-medium text-gray-400">
+          Lil&apos; Hops – Du hast heute Geburtstag
         </span>
       </button>
     </>
