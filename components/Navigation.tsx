@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AudioPlayer from "@/components/AudioPlayer";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -22,20 +23,23 @@ export default function Navigation() {
           <span className="text-mint-400 ml-2">HOPS</span>
         </Link>
 
-        <div className="flex gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`transition-colors font-medium ${
-                isActive(link.href)
-                  ? "text-white"
-                  : "text-white hover:text-pink-300"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="flex items-center gap-6">
+          <div className="flex gap-8">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors font-medium ${
+                  isActive(link.href)
+                    ? "text-white"
+                    : "text-white hover:text-pink-300"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <AudioPlayer />
         </div>
       </div>
     </nav>
